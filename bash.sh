@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# set default container
+container=workspace
+
+# argument exists
+if [ ! -z "$1" ]
+then
+    # set container to the desired
+    container=$1
+fi
+
+# go to laradock directory
+cd laradock
+
+# open the bash on the container
+docker-compose exec $container bash
