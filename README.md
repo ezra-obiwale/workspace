@@ -15,18 +15,18 @@ Default container is `workspace`.
 
 ### bootdown
 
-Stops running containers - `./bootdown ${container1} ${container-2} ${container-3}`.
+Stops running containers - `./bootdown ${container1} ${container2} ${container3}`.
 
 All running containers are stopped by default.
 
 ### bootup
 
-Starts containers - `./bootup ${container1} ${container-2} ${container-3} ...`.
+Starts containers - `./bootup ${container1} ${container2} ${container3} ...`.
 
 Default containers are `nginx`, `php-fpm`, `beanstalkd`, `mariadb`, `phpmyadmin` and `workspace`.
 
 ### build
 
-(Re)builds containers - `./build ${container1} ${container-2} ${container-3} ...`.
+(Re)builds containers - `./build ${container1} ${container2} ${container3} ...`.
 
 Default containers are `nginx`, `php-fpm`, `beanstalkd`, `mariadb`, `phpmyadmin` and `workspace`.
