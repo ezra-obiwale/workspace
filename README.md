@@ -5,7 +5,7 @@ A laradock multiple project setup with some script shortcuts to achieving most t
 
 ### add-repo
 
-A shortcut to `git submodule add path/to/repo`.
+A shortcut to `./add-repo.sh path/to/repo`.
 
 ### bash
 
