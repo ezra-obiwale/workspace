@@ -30,3 +30,7 @@ Default containers are `nginx`, `php-fpm`, `beanstalkd`, `mariadb`, `phpmyadmin`
 (Re)builds containers - `./build ${container1} ${container2} ${container3} ...`.
 
 Default containers are `nginx`, `php-fpm`, `beanstalkd`, `mariadb`, `phpmyadmin` and `workspace`.
+
+### remove
+
+A shortcut to remove a repository from the workspace - `./remove path/to/repo`.
