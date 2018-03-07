@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# argument does not exist
+if [ -z "$1" ]
+then
+	# Show help
+	echo
+	echo Specify a path to a git repository to remove from the workspace
+	echo
+else
+    # add repository as a submodule
+    
+    git config -f .gitmodules --remove-section "submodule.$@"
+    git config -f .git/config --remove-section "submodule.$@"
+    git rm --cached "$@"
+    git add .gitmodules
+    git commit -m "Remove submodule $@"
+    rm -rf "$@"
+    rm -rf ".git/modules/$@"
+fi
+
+exit 0

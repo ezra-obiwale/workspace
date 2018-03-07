@@ -1,12 +1,3 @@
-[submodule "schoolable-frontend"]
-	path = schoolable-frontend
-	url = https://ezraobiwale@bitbucket.org/klipboarderp/schoolable-frontend.git
-[submodule "schoolable-backend"]
-	path = schoolable-backend
-	url = https://ezraobiwale@bitbucket.org/klipboarderp/schoolable-backend.git
-[submodule "allpay"]
-	path = allpay
-	url = https://ezraobiwale@bitbucket.org/klipboarderp/allpay.git
-[submodule "core"]
-	path = core
-	url = https://ezraobiwale@bitbucket.org/klipboarderp/core.git
+[submodule "laradock"]
+	path = laradock
+	url = https://github.com/ezra-obiwale/laradock.git

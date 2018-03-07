@@ -3,9 +3,9 @@ A laradock multiple project setup with some script shortcuts to achieving most t
 
 ## Scripts
 
-### add-repo
+### add
 
-A shortcut to `./add-repo path/to/repo`.
+A shortcut to add a repository to the workspace - `./add path/to/repo`.
 
 ### bash
 

@@ -14,4 +14,4 @@ fi
 cd laradock
 
 # open the bash on the container
-docker-compose exec $container bash
+docker-compose exec --user=laradock $container bash
