@@ -4,7 +4,7 @@ A laradock multiple project setup with some script shortcuts to achieving most t
 ## Installation
 
 ```bash
-git clone git@github.com:ezra-obiwale/workspace.git --recursive
+git clone https://github.com/ezra-obiwale/workspace.git --recursive
 ```
 
 ## setup
