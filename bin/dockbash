@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+. dockinit
 
 # set default container
 container=workspace
@@ -14,4 +16,4 @@ fi
 cd laradock
 
 # open the bash on the container
-docker-compose exec --user=laradock $container bash
+docker-compose exec $container bash

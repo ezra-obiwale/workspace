@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+. dockerinit
 
 # go to laradock directory
 cd laradock

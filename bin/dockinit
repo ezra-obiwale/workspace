@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# SET PATH TO THE WORKSPACE DIRECTORY
+path_to_workspace=/var/www/workspace
+
+# SET DESIRED CONTAINERS
+containers="nginx mysql phpmyadmin"
+
+# SET THE DOCKER HOST IP
+docker_host_ip=10.0.75.1
+
+# ----------------- DO NOT EDIT BELOW THIS LINE -------------------
+
+cd $path_to_workspace

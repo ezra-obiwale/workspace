@@ -1,6 +1,17 @@
 # workspace
 A laradock multiple project setup with some script shortcuts to achieving most things.
 
+## Installation
+
+```bash
+git clone git@github.com:ezra-obiwale/workspace.git --recursive
+```
+
+## setup
+
+- Add the **bin** directory to your terminal environment path
+- Open `bin/dockinit` and set the variables
+
 ## Scripts
 
 ### add

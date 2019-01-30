@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+. dockerinit
+
+if [ "$1" = "remove" ]
+then
+    if [ "$2" = "" ]
+    then
+        echo You must specify the desired name of workspace directory to remove from submodules
+        exit 1
+    elif [ "$2" = "laradock" ]
+        echo Removal of laradock as a submodule is disallowed
+        exit 1
+    fi
+
+    git config -f .gitmodules --remove-section "submodule.$2"
+    git config -f .git/config --remove-section "submodule.$2"
+    git rm --cached "$2"
+    git add .gitmodules
+    git commit -m "Remove submodule $2"
+    rm -rf ".git/modules/$2"
+    rm -rf "$2"
+
+    echo "$2 removed as a submodule"
+
+    exit 0
+fi
+
+git submodule "$@"
+
+exit 0

@@ -1,7 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# set default containers
-containers="nginx php-fpm beanstalkd mariadb phpmyadmin workspace"
+. dockerinit
+
+sudo ifconfig lo0 alias $docker_host_ip/24
+export DOCKER_HOST_IP=$docker_host_ip
 
 # argument exists
 if [ ! -z "$1" ]

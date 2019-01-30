@@ -1,7 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# set default containers
-containers="nginx php-fpm beanstalkd mariadb phpmyadmin workspace"
+. dockinit
 
 # argument exists
 if [ ! -z "$1" ]
