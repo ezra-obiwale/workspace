@@ -23,6 +23,8 @@ then
     rm -rf "$2"
 
     echo "$2 removed as a submodule"
+    echo
+    echo "You must commit before you can add $2 again" 
 
     exit 0
 fi
