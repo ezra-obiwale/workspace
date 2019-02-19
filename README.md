@@ -14,34 +14,34 @@ git clone https://github.com/ezra-obiwale/workspace.git --recursive
 
 ## Scripts
 
-### add
+### dockinit
 
-A shortcut to add a repository to the workspace - `./add path/to/repo`.
+Collect variables and changes working directory to workpace directory.
 
-### bash
+### dockbuild
 
-A shortcut to open the bash on any container - `./bash ${container}`.
+(Re)builds containers - `./dockbuild ${container1} ${container2} ${container3} ...`.
+
+Default containers are those specified in the `dockinit` container variable.
+
+### dockup
+
+Starts containers - `./dockup ${container1} ${container2} ${container3} ...`.
+
+Default containers are those specified in the `dockinit` container variable.
+
+### dockbash
+
+A shortcut to open the bash on any container - `dockbash ${container}`.
 
 Default container is `workspace`.
 
-### bootdown
+### dockdown
 
-Stops running containers - `./bootdown ${container1} ${container2} ${container3}`.
+Stops running containers - `./dockdown ${container1} ${container2} ${container3}`.
 
 All running containers are stopped by default.
 
-### bootup
+### dockrepo
 
-Starts containers - `./bootup ${container1} ${container2} ${container3} ...`.
 
-Default containers are `nginx`, `php-fpm`, `beanstalkd`, `mariadb`, `phpmyadmin` and `workspace`.
-
-### build
-
-(Re)builds containers - `./build ${container1} ${container2} ${container3} ...`.
-
-Default containers are `nginx`, `php-fpm`, `beanstalkd`, `mariadb`, `phpmyadmin` and `workspace`.
-
-### remove
-
-A shortcut to remove a repository from the workspace - `./remove path/to/repo`.
