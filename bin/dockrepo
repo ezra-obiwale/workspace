@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-. dockerinit
+. dockinit
 
 if [ "$1" = "remove" ]
 then
@@ -8,9 +8,10 @@ then
     then
         echo You must specify the desired name of workspace directory to remove from submodules
         exit 1
-    elif [ "$2" = "laradock" ]
-        echo Removal of laradock as a submodule is disallowed
-        exit 1
+#    elif [ "$2" = "laradock" ]
+#    then
+#        echo Removal of laradock as a submodule is disallowed
+#        exit 1
     fi
 
     git config -f .gitmodules --remove-section "submodule.$2"
