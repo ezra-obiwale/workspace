@@ -4,16 +4,64 @@
 
 # set default container
 container=workspace
+# set default user
+user=laradock
+command=
+
+function usage() {
+    echo "A shortcut to docker-compose bash"
+    echo "Usage: dockbash [-r|-h|-u USER] [container] [...]"
+    echo
+    echo "Options:"
+    echo "  -h          Shows this help message"
+    echo "  -u USER     Sets the user for the bash. The next argument must be the user"
+    echo "  -r          Sets the user for the bash as root"
+}
+
+while getopts ":u:c:rh" opt; do
+  case ${opt} in
+    u )
+        user=$OPTARG
+        ;;
+    c )
+        command=$OPTARG
+        ;;
+    r )
+        user=root
+        ;;
+    h )
+        usage
+        exit 0
+        ;;
+    \? )
+        usage
+        exit 1
+        ;;
+    : )
+        echo "Invalid option: -$OPTARG requires a value"
+        echo
+        usage
+        exit 1
+        ;;
+  esac
+done
+
+shift $((OPTIND -1))
 
 # argument exists
 if [ ! -z "$1" ]
 then
     # set container to the desired
     container=$1
+    shift
 fi
 
 # go to laradock directory
 cd laradock
 
-# open the bash on the container
-docker-compose exec $container bash
+if [ -n "$command" ]
+then
+    docker-compose exec --user=$user $container bash -c "$command"
+else
+    docker-compose exec --user=$user $container bash
+fi
